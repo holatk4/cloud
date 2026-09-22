@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reefscape — The Living Coral Reef</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Animated underwater background -->
+  <canvas id="ocean"></canvas>
+  <div class="vignette"></div>
+
+  <!-- Navigation -->
+  <header class="nav">
+    <a href="#hero" class="brand">
+      <span class="brand-dot"></span> Reefscape
+    </a>
+    <nav class="links">
+      <a href="#hero">Home</a>
+      <a href="#about">The Reef</a>
+      <a href="#species">Species</a>
+      <a href="#threats">Threats</a>
+      <a href="#pledge">Take Action</a>
+    </nav>
+    <button id="soundToggle" class="sound-btn" aria-label="Toggle ambient sound">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+    </button>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">The Rainforests of the Sea</p>
+      <h1>Beneath the <span class="gradient">Blue</span></h1>
+      <p class="sub">
+        Coral reefs cover less than 1% of the ocean floor yet shelter nearly
+        a quarter of all marine life. Dive into the world's most vibrant
+        living cities.
+      </p>
+      <div class="hero-actions">
+        <a href="#about" class="btn btn-primary">Explore the Reef</a>
+        <a href="#pledge" class="btn btn-ghost">Protect It</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><strong>25%</strong><span>of marine species</span></div>
+        <div class="stat"><strong>500M</strong><span>people depend on reefs</span></div>
+        <div class="stat"><strong>$375B</strong><span>annual economic value</span></div>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>scroll</span>
+      <div class="mouse"><div class="wheel"></div></div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <p class="eyebrow">What is a reef?</p>
+      <h2 class="title">A City Built by Tiny Builders</h2>
+      <p class="lead">
+        Coral reefs are formed by colonies of tiny animals called polyps that
+        secrete calcium carbonate skeletons. Over centuries, millions of these
+        skeletons stack into the largest living structures on Earth.
+      </p>
+      <div class="cards">
+        <div class="card">
+          <div class="card-icon">🐠</div>
+          <h3>Biodiversity Hotspot</h3>
+          <p>Home to 4,000+ fish species and countless invertebrates, corals, and algae.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🌊</div>
+          <h3>Natural Barrier</h3>
+          <p>Reefs absorb up to 97% of wave energy, shielding coastlines from storms.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🧪</div>
+          <h3>Medicine Cabinet</h3>
+          <p>Reef organisms are used in treatments for cancer, heart disease, and pain.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🌍</div>
+          <h3>Climate Regulator</h3>
+          <p>Reefs cycle nutrients and support the ocean's carbon and nitrogen balance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Species -->
+  <section id="species" class="section alt">
+    <div class="container">
+      <p class="eyebrow">Meet the residents</p>
+      <h2 class="title">Iconic Reef Life</h2>
+      <div class="species-grid">
+        <article class="species-card" data-sound="clown">
+          <div class="species-emoji">🐠</div>
+          <h3>Clownfish</h3>
+          <p>Lives in a symbiotic dance with sea anemones, immune to their sting.</p>
+          <span class="tag">Reef Fish</span>
+        </article>
+        <article class="species-card" data-sound="turtle">
+          <div class="species-emoji">🐢</div>
+          <h3>Sea Turtle</h3>
+          <p>Ancient navigators that graze on seagrass and keep reefs healthy.</p>
+          <span class="tag">Reptile</span>
+        </article>
+        <article class="species-card" data-sound="ray">
+          <div class="species-emoji">🦈</div>
+          <h3>Reef Shark</h3>
+          <p>Apex predators that keep the reef's food web in perfect balance.</p>
+          <span class="tag">Predator</span>
+        </article>
+        <article class="species-card" data-sound="coral">
+          <div class="species-emoji">🪸</div>
+          <h3>Staghorn Coral</h3>
+          <p>Fast-growing branching coral that builds dense, sheltering thickets.</p>
+          <span class="tag">Coral</span>
+        </article>
+        <article class="species-card" data-sound="anemone">
+          <div class="species-emoji">🌺</div>
+          <h3>Sea Anemone</h3>
+          <p>A living flower whose tentacles sting prey — and shelter clownfish.</p>
+          <span class="tag">Invertebrate</span>
+        </article>
+        <article class="species-card" data-sound="parrot">
+          <div class="species-emoji">🦜</div>
+          <h3>Parrotfish</h3>
+          <p>Crunches coral into sand — a single one can produce 90kg of sand a year.</p>
+          <span class="tag">Reef Fish</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Threats -->
+  <section id="threats" class="section">
+    <div class="container">
+      <p class="eyebrow">The crisis</p>
+      <h2 class="title">Reefs Under Pressure</h2>
+      <p class="lead">
+        Half of the world's coral reefs have already been lost. Without action,
+        up to 90% could vanish by 2050.
+      </p>
+      <div class="threat-list">
+        <div class="threat">
+          <div class="threat-head">
+            <span class="threat-icon">🌡️</span>
+            <h3>Climate Change &amp; Bleaching</h3>
+            <span class="threat-pct">50%+</span>
+          </div>
+          <div class="bar"><div class="bar-fill" data-w="50"></div></div>
+          <p>Rising temperatures force corals to expel their algae, turning them white and starving them.</p>
+        </div>
+        <div class="threat">
+          <div class="threat-head">
+            <span class="threat-icon">🏭</span>
+            <h3>Pollution &amp; Runoff</h3>
+            <span class="threat-pct">40%</span>
+          </div>
+          <div class="bar"><div class="bar-fill" data-w="40"></div></div>
+          <p>Agricultural runoff and plastic smother reefs and block the sunlight corals need.</p>
+        </div>
+        <div class="threat">
+          <div class="threat-head">
+            <span class="threat-icon">⚓</span>
+            <h3>Overfishing &amp; Damage</h3>
+            <span class="threat-pct">30%</span>
+          </div>
+          <div class="bar"><div class="bar-fill" data-w="30"></div></div>
+          <p>Destructive fishing and physical damage break fragile coral structures.</p>
+        </div>
+        <div class="threat">
+          <div class="threat-head">
+            <span class="threat-icon">🧊</span>
+            <h3>Ocean Acidification</h3>
+            <span class="threat-pct">25%</span>
+          </div>
+          <div class="bar"><div class="bar-fill" data-w="25"></div></div>
+          <p>Absorbed CO₂ makes the ocean more acidic, dissolving coral skeletons.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pledge / Action -->
+  <section id="pledge" class="section cta">
+    <div class="container narrow">
+      <p class="eyebrow">Make a difference</p>
+      <h2 class="title">Take the Reef Pledge</h2>
+      <p class="lead">
+        Small daily choices add up. Commit to protecting the ocean's most
+        precious ecosystem.
+      </p>
+      <form id="pledgeForm" class="pledge-form">
+        <input type="text" id="name" placeholder="Your name" required />
+        <input type="email" id="email" placeholder="Your email" required />
+        <button type="submit" class="btn btn-primary btn-block">I Pledge to Protect the Reefs</button>
+      </form>
+      <div id="pledgeMsg" class="pledge-msg" hidden></div>
+      <div class="pledge-count">
+        <strong id="pledgeCount">0</strong> people have pledged
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Reefscape — a tribute to the living coral reef. 🪸</p>
+      <p class="small">Made with care for our blue planet.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
